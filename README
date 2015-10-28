@@ -1,0 +1,22 @@
+* README
+  This demo uses SSHJ(net.schmizz) to execute remote command and download file by sftp with sshv2.
+  pls find instructions from comment in main/java/com/crscd/ssh/App.java
+  
+* Usage
+** AuthKey prepair
+   1. update /etc/ssh/ssd_config at remote hosts
+   2. generate a rsa pub/pri key pair
+   3. copy pub key into ~/.ssh/authorized_keys at remote hosts
+** from shell:
+
+   qigao@X64U:~/java_ssh_demo$ mvn compile
+   qigao@X64U:~/java_ssh_demo$ mvn exec:java -Dexec.mainClass="com.crscd.ssh.App" -Dexec.args="root@172.16.13.163"
+
+  result like below will be displayed:
+  root     26853     1  0 11:27 ?        00:00:00 /usr/sbin/sshd
+  root      2263  2261  0 16:13 ?        00:00:00 bash -c ps -ef|grep "/usr/sbin/sshd"
+  root      2281  2263  0 16:13 ?        00:00:00 grep /usr/sbin/sshd
+
+ also a file from /root/install.log from remote server will be download at current path.
+** Test cases
+   no test case is provide
