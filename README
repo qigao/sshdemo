@@ -17,6 +17,6 @@
   root      2263  2261  0 16:13 ?        00:00:00 bash -c ps -ef|grep "/usr/sbin/sshd"
   root      2281  2263  0 16:13 ?        00:00:00 grep /usr/sbin/sshd
 
- also a file from /root/install.log from remote server will be download at current path.
+ also a file from /root/install.log from remote server will be downloaded at current directory.
 ** Test cases
    no test case is provide
